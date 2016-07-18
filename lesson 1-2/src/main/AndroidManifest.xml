@@ -12,8 +12,7 @@
         android:theme="@style/AppTheme">
 
         <activity
-            android:name="ru.tinkoff.school.MainActivity"
-            android:screenOrientation="portrait">
+            android:name="ru.tinkoff.school.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
