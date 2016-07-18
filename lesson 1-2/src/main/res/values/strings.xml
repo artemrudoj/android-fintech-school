@@ -1,5 +1,4 @@
 <resources>
-    <!-- TODO добавить локализацию на Английский язык -->
     <string name="app_name">Lessons 1–2</string>
     <string name="capture_photo">Сделать фото</string>
     <string name="choose_photo">Выбрать изображение</string>

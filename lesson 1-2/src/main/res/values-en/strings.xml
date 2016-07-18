@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Lessons 1–2</string>
+    <string name="capture_photo">Make photo</string>
+    <string name="choose_photo">Choose image</string>
+    <string name="send">Send</string>
+    <string name="email">Email</string>
+    <string name="cancelled">Cancelled</string>
+</resources>
