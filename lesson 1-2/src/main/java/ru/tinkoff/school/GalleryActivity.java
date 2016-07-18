@@ -24,7 +24,7 @@ public class GalleryActivity extends AppCompatActivity {
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        // TODO задать лейаут для активности из activity_gallery.xml
+        setContentView(R.layout.activity_gallery);
 
         GridView grid = (GridView) findViewById(R.id.gallery);
         grid.setAdapter(new GalleryAdapter(this));

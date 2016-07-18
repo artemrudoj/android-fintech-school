@@ -25,7 +25,8 @@ public class ImageProcessingBroadcastReceiver extends BroadcastReceiver {
     public static void notifyReceiver(Context context, Bitmap bitmap) {
         Intent i = new Intent(ACTION);
         i.putExtra(BITMAP_EXT, bitmap);
-        // TODO отправить Intent, чтобы на него среагировал BroadcastReceiver
+        LocalBroadcastManager.getInstance(context).sendBroadcast(i);
+
     }
 
     public ImageProcessingBroadcastReceiver(ImageView preview, ProgressBar progress) {
@@ -42,12 +43,11 @@ public class ImageProcessingBroadcastReceiver extends BroadcastReceiver {
         progress.setVisibility(View.GONE);
     }
 
-    // TODO найти место где можно применить данный метод
     public void register(Context context) {
         LocalBroadcastManager.getInstance(context).registerReceiver(this, filter);
     }
 
-    // TODO найти место где можно применить данный метод
+
     public void unregister(Context context) {
         LocalBroadcastManager.getInstance(context).unregisterReceiver(this);
     }

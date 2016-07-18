@@ -27,25 +27,22 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        // TODO задать лейаут активности из activity_main.xml
-        // setContentView(...);
-        // TODO найти в лейауте нужные View по id
-        // preview =
-        // progress =
-        // TODO создать BroadcastReceiver
-        // receiver =
+        setContentView(R.layout.activity_main);
+        preview = (ImageView) findViewById(R.id.preview);
+        progress = (ProgressBar) findViewById(R.id.progress);
+        receiver = new ImageProcessingBroadcastReceiver(preview, progress);
     }
 
     @Override
     protected void onResume() {
         super.onResume();
-        // TODO зарегистрировать ресивер
+        receiver.register(this);
     }
 
     @Override
     protected void onPause() {
-        // TODO разрегистрировать ресивер
         super.onPause();
+        receiver.unregister(this);
     }
 
     @Override
